@@ -135,9 +135,9 @@ Some advantages of policy-based methods:
 #### Deep Deterministic Policy Gradient (DDPG)
 The **DDPG** algorithm is outlined in [this paper](https://arxiv.org/pdf/1509.02971.pdf), _Continuous Control with Deep Reinforcement Learning_, by researchers at Google Deepmind. In this paper, the authors present "a model-free, off-policy actor-critic algorithm using deep function approximators that can learn policies in high-dimensional, continuous action spaces." They highlight that DDPG can be viewed as an extension of Deep Q-learning for continuous tasks.
 
-An algorithm suitable for the ***competitive-collaborative agents*** in the **Tennis** environment is discussed in [this paper](https://papers.nips.cc/paper/7217-multi-agent-actor-critic-for-mixed-cooperative-competitive-environments.pdf), _Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments_, by Lowe and Wu, along with other researchers from OpenAI, UC Berkeley, and McGill University.
+An algorithm suitable for the ***competitive-collaborative agents*** in the **Tennis** environment is discussed in [this paper](https://papers.nips.cc/paper/7217-multi-agent-actor-critic-for-mixed-cooperative-competitive-environments.pdf), _Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments_, by Lowe and Wu, along with other researchers from OpenAI, UC Berkeley, and McGill University. This algorithm is called **Multi-Agent Deep Deterministic Policy Gradients** (**MADDPG**).
 
-***See*** diagram of **MADDPG** (Multi-Agent Deep Deterministic Policy Gradients) shown above.
+***See*** a diagram of **MADDPG** shown above.
 
 ###### &nbsp;
 
@@ -219,7 +219,7 @@ Similarly, the  **Critic** consists of three (3) fully-connected (**Linear**) la
 
 The best result (MADDPG) from Step 4 was an agent (technically, two agents) able to solve the environment ***in 557 episodes!***.
 
-<img src="assets/p3_collaboration-and-competition-Final-Average-Score.png" width="50%" align="top-left" alt="" title="Best Agent Graph" />
+<img src="assets/p3_collab-compet-Final-Average-Score.png" width="50%" align="top-left" alt="" title="Best Agent Graph" />
 
 ##### &nbsp;
 
@@ -252,7 +252,9 @@ It is in this light that I want to explore the following:
 
 1. Research and implement/apply *stability improvements* on the current **MADDPG** model I used in this project and see if I can actually reduce the variance in the number of episodes to solve the environment (between training runs).
 2. Research and try other Multi-Agent Reinforcement Learning (**MARL**) algorithms. Working on this project and the optional **Play Soccer** challenge, I realized there is so much to learn and experiment on regarding **RL/DRL** and specifically **MARL**. I am really fascinated - actually, ***hooked*** - on this, and really plan on reading/studying and trying related research papers and their implementation in PyTorch - ***in the next 45 days***.
-3. Try the **(Optional) Challenge: Play Soccer**. Currently ***in progress!*** The challenge with this optional challenge (*no pun intended!*) is that training takes a VERY LONG time :-( I trained my first model, and it didn't converge after 8+ hours and 15,000 episodes. BUT, I am not stopping until I get to solve it. (***The trained team has been successfully trained when it scores a goal and wins 100 consecutive games.***)
+3. Try the **(Optional) Challenge: Play Soccer**. Currently ***in progress!*** The challenge with this optional challenge (*no pun intended!*) is that training takes a VERY LONG time :-( I trained my first model, and it didn't converge after 8+ hours and 15,000 episodes. And this is on a Ubuntu 18.04.2 LTS partition on a really fast Samsung SSD, 48GB RAM, and 8GB GTX 1070 GPU. 
+
+BUT, I am not stopping until I get to solve this challenge. (***The trained team has been successfully trained when it scores a goal and wins 100 consecutive games.***)
 
 <img src="assets/soccer.png" width="60%" align="top-left" alt="" title="Soccer" />
 
